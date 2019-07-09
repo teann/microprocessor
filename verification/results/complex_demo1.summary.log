@@ -1,0 +1,5 @@
+/u/s/i/sinclair/courses/cs552/spring2019/handouts/testprograms/public/complex_demo1/branchTest.asm SUCCESS CPI:9.3 CYCLES:196 ICOUNT:21 IHITRATE: 19.2 DHITRATE: 0
+/u/s/i/sinclair/courses/cs552/spring2019/handouts/testprograms/public/complex_demo1/easyTest.asm SUCCESS CPI:13.0 CYCLES:535 ICOUNT:41 IHITRATE: 24.8 DHITRATE: 0
+/u/s/i/sinclair/courses/cs552/spring2019/handouts/testprograms/public/complex_demo1/firstTest.asm SUCCESS CPI:3.5 CYCLES:142 ICOUNT:41 IHITRATE: 25.9 DHITRATE: 0
+/u/s/i/sinclair/courses/cs552/spring2019/handouts/testprograms/public/complex_demo1/loadStoreTest.asm SUCCESS CPI:4.3 CYCLES:134 ICOUNT:31 IHITRATE: 36.6 DHITRATE: 157.1
+/u/s/i/sinclair/courses/cs552/spring2019/handouts/testprograms/public/complex_demo1/shiftTest.asm SUCCESS CPI:3.3 CYCLES:325 ICOUNT:98 IHITRATE: 30.1 DHITRATE: 0

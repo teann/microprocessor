@@ -1,0 +1,1073 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo2/verilog
+valu
+Z0 !s110 1556503614
+!i10b 1
+!s100 gMe:_1?BWPJZnSRHlnc;M1
+IJ=jI:K1nZHzm^1>HYbolj0
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 d/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog
+w1554772411
+8/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/alu.v
+F/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/alu.v
+L0 1
+Z3 OP;L;10.7c;67
+r1
+!s85 0
+31
+!s108 1556503613.000000
+!s107 /afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/alu.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/alu.v|
+!i113 1
+Z4 o-work work
+Z5 tCvgOpt 0
+vbarrelShifter
+R0
+!i10b 1
+!s100 K>FFXGbJ]MXNj`^Dme2KW2
+IQFCKGWh<Yc;4V39MM>LA^3
+R1
+R2
+Z6 w1553646553
+8/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/barrelShifter.v
+F/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/barrelShifter.v
+L0 11
+R3
+r1
+!s85 0
+31
+Z7 !s108 1556503614.000000
+!s107 /afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/barrelShifter.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/barrelShifter.v|
+!i113 1
+R4
+R5
+nbarrel@shifter
+vbarrelShifter_hier
+R0
+!i10b 1
+!s100 CcMA]KG_:@g4TE;;AgS6=2
+IX^7^V6jD?FEfQzPbXE;S<3
+R1
+R2
+R6
+8/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/barrelShifter_hier.v
+F/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/barrelShifter_hier.v
+L0 8
+R3
+r1
+!s85 0
+31
+R7
+!s107 /afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/barrelShifter_hier.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/barrelShifter_hier.v|
+!i113 1
+R4
+R5
+nbarrel@shifter_hier
+vbranchLogic
+R0
+!i10b 1
+!s100 RY_H:0AD2Dlb<Kaeh_SIR3
+IQL5O1F7bXAzfD7;icT]Ef3
+R1
+R2
+w1554670821
+8/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/branchLogic.v
+F/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/branchLogic.v
+L0 1
+R3
+r1
+!s85 0
+31
+R7
+!s107 /afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/branchLogic.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/branchLogic.v|
+!i113 1
+R4
+R5
+nbranch@logic
+vcache
+R0
+!i10b 1
+!s100 ^XO^B<A5VCacXoMb3=>a93
+IHzaAzQ2SbfA9_BikKXeG>2
+R1
+R2
+Z8 w1556215592
+8/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/cache.v
+F/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/cache.v
+L0 17
+R3
+r1
+!s85 0
+31
+R7
+!s107 /afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/cache.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/cache.v|
+!i113 1
+R4
+R5
+vclkrst
+R0
+!i10b 1
+!s100 dXeZW6^GGFm3?LCRKVTVY1
+IalE0Um?S<d^=19<la^^5Y0
+R1
+R2
+R8
+8/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/clkrst.v
+F/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/clkrst.v
+Z9 L0 12
+R3
+r1
+!s85 0
+31
+R7
+!s107 /afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/clkrst.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/clkrst.v|
+!i113 1
+R4
+R5
+vcontrol
+Z10 !s110 1556503615
+!i10b 1
+!s100 RbSBe=4>fH9>GS>W>?G830
+IA?6B3i0SUSz5Bg84O5PJ>2
+R1
+R2
+w1554752025
+8/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/control.v
+F/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/control.v
+L0 7
+R3
+r1
+!s85 0
+31
+Z11 !s108 1556503615.000000
+!s107 /afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/control.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/control.v|
+!i113 1
+R4
+R5
+vcontrol_hier
+R10
+!i10b 1
+!s100 GTUWgPB8VkS9E3]g3DFLR3
+IcNh7m9k102PmJlo^A][lR2
+R1
+R2
+R6
+8/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/control_hier.v
+F/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/control_hier.v
+Z12 L0 10
+R3
+r1
+!s85 0
+31
+R11
+!s107 /afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/control_hier.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/control_hier.v|
+!i113 1
+R4
+R5
+vcontrolCase
+R10
+!i10b 1
+!s100 m2`gU]^zKoQjN9`hTALO[0
+INie45DM1zWi8nR;63QU@h0
+R1
+R2
+w1554338612
+8/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/controlCase.v
+F/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/controlCase.v
+L0 8
+R3
+r1
+!s85 0
+31
+R11
+!s107 /afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/controlCase.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/controlCase.v|
+!i113 1
+R4
+R5
+ncontrol@case
+vdff
+R10
+!i10b 1
+!s100 ViOz^Z62fjEjz6RVO<aaU3
+IzVk2g?;hl<WBXedcFWO:e3
+R1
+R2
+R8
+8/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/dff.v
+F/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/dff.v
+R12
+R3
+r1
+!s85 0
+31
+R11
+!s107 /afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/dff.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/dff.v|
+!i113 1
+R4
+R5
+vdff_stall
+R10
+!i10b 1
+!s100 S2mza9z[f1?[e@AcAFldc3
+I4c@216l1aJl`d8J=WbTO^1
+R1
+R2
+w1556290971
+8/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/dff_stall.v
+F/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/dff_stall.v
+L0 6
+R3
+r1
+!s85 0
+31
+R11
+!s107 /afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/dff_stall.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/dff_stall.v|
+!i113 1
+R4
+R5
+vdffe
+Z13 !s110 1556503616
+!i10b 1
+!s100 636;NeNzSP:5mgiAhE4DQ3
+IcchXgRVbYIzX0kEHR[o?[3
+R1
+R2
+R8
+8/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/dffe.v
+F/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/dffe.v
+L0 8
+R3
+r1
+!s85 0
+31
+R11
+!s107 /afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/dffe.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/dffe.v|
+!i113 1
+R4
+R5
+vfinal_memory
+R13
+!i10b 1
+!s100 P?aW6VbIzY5]MhbW=dZal1
+IC9jzcP_IRcS<3:>8:mOOC2
+R1
+R2
+w1556216105
+8/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/final_memory.v
+F/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/final_memory.v
+L0 54
+R3
+r1
+!s85 0
+31
+Z14 !s108 1556503616.000000
+!s107 /afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/final_memory.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/final_memory.v|
+!i113 1
+R4
+R5
+vfour_bank_mem
+R13
+!i10b 1
+!s100 `nOCWH4I@mOAo2cBkRFOE1
+Ih1zBiN<@5_B;<aP^AYgBK2
+R1
+R2
+R8
+8/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/four_bank_mem.v
+F/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/four_bank_mem.v
+L0 65
+R3
+r1
+!s85 0
+31
+R14
+!s107 /afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/four_bank_mem.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/four_bank_mem.v|
+!i113 1
+R4
+R5
+vfullAdder_1b
+R13
+!i10b 1
+!s100 9deXNVLNk`2z3lTi9N>E00
+ISnX7U>Lb=d_M55276Tb?V1
+R1
+R2
+R6
+8/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/fullAdder_1b.v
+F/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/fullAdder_1b.v
+L0 7
+R3
+r1
+!s85 0
+31
+R14
+!s107 /afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/fullAdder_1b.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/fullAdder_1b.v|
+!i113 1
+R4
+R5
+nfull@adder_1b
+vhazard
+R13
+!i10b 1
+!s100 PjZ7FL5`_K>P@WXlU0;MA1
+I8>1jhJ:Ei?gV_RH11lIHE1
+R1
+R2
+w1556501768
+8/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/hazard.v
+F/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/hazard.v
+L0 1
+R3
+r1
+!s85 0
+31
+R14
+!s107 /afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/hazard.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/hazard.v|
+!i113 1
+R4
+R5
+vinvalidOpCode
+Z15 !s110 1556503617
+!i10b 1
+!s100 _=PCGO;jh9BAF9RNRVzif0
+IPVB`hE]0da8IWDWnTdK2l3
+R1
+R2
+R8
+8/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/invalidOpCode.v
+F/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/invalidOpCode.v
+R12
+R3
+r1
+!s85 0
+31
+R14
+!s107 /afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/invalidOpCode.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/invalidOpCode.v|
+!i113 1
+R4
+R5
+ninvalid@op@code
+vmem_system
+R15
+!i10b 1
+!s100 oF@I4ZV35^V9af^3mcMDF0
+Ie?fE2zbTUNRaed<8mOEh62
+R1
+R2
+w1556304200
+8/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/mem_system.v
+F/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/mem_system.v
+R12
+R3
+r1
+!s85 0
+31
+Z16 !s108 1556503617.000000
+!s107 /afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/mem_system.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/mem_system.v|
+!i113 1
+R4
+R5
+vmem_system_hier
+R15
+!i10b 1
+!s100 jH?Xg[_=jWG]6c4^mN>9B1
+IojY>aHd_j?^O2oeL^]<ZU1
+R1
+R2
+R8
+8/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/mem_system_hier.v
+F/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/mem_system_hier.v
+L0 5
+R3
+r1
+!s85 0
+31
+R16
+!s107 /afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/mem_system_hier.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/mem_system_hier.v|
+!i113 1
+R4
+R5
+vmem_system_perfbench
+R15
+!i10b 1
+!s100 ZO;hbKKe1Tef`T9XO5>YH1
+IXzR4?i=z5ZIn`h49=<[QT0
+R1
+R2
+R8
+8/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/mem_system_perfbench.v
+F/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/mem_system_perfbench.v
+L0 7
+R3
+r1
+!s85 0
+31
+R16
+!s107 /afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/mem_system_perfbench.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/mem_system_perfbench.v|
+!i113 1
+R4
+R5
+vmem_system_randbench
+R15
+!i10b 1
+!s100 iX9^MX7f7db;gH]1I`2dG0
+Ih?187=QLA5?dnULh?]4I63
+R1
+R2
+R8
+8/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/mem_system_randbench.v
+F/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/mem_system_randbench.v
+L0 5
+R3
+r1
+!s85 0
+31
+R16
+!s107 /afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/mem_system_randbench.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/mem_system_randbench.v|
+!i113 1
+R4
+R5
+vmem_system_ref
+R15
+!i10b 1
+!s100 5YM5MKPR1kWC9hzlV_H@m1
+IG:QX0k:O__IHPNUe0YQ;J2
+R1
+R2
+R8
+8/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/mem_system_ref.v
+F/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/mem_system_ref.v
+L0 5
+R3
+r1
+!s85 0
+31
+R16
+!s107 /afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/mem_system_ref.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/mem_system_ref.v|
+!i113 1
+R4
+R5
+vmemc
+Z17 !s110 1556503618
+!i10b 1
+!s100 ]4ZW53m[I5a]5h4D^M?UE3
+IeVcfJV^XjcgDnD=mi^L0K1
+R1
+R2
+R8
+8/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/memc.v
+F/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/memc.v
+L0 6
+R3
+r1
+!s85 0
+31
+Z18 !s108 1556503618.000000
+!s107 /afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/memc.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/memc.v|
+!i113 1
+R4
+R5
+vmemory2c
+R17
+!i10b 1
+!s100 mBla:Z3FU]LZ9QoAFNKak1
+IcinnYk8oe2D;2<2P[N6G?0
+R1
+R2
+R6
+8/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/memory2c.v
+F/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/memory2c.v
+L0 35
+R3
+r1
+!s85 0
+31
+R18
+!s107 /afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/memory2c.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/memory2c.v|
+!i113 1
+R4
+R5
+vmemory2c_align
+Z19 !s110 1556503619
+!i10b 1
+!s100 JQoZAT7fG>Xm:gJ?Lf?fY0
+IC[C5ObJ[Nz[J_<h;eQ>gT1
+R1
+R2
+Z20 w1550691059
+8/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/memory2c_align.v
+F/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/memory2c_align.v
+L0 36
+R3
+r1
+!s85 0
+31
+Z21 !s108 1556503619.000000
+!s107 /afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/memory2c_align.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/memory2c_align.v|
+!i113 1
+R4
+R5
+vmemStateMachine_Set
+R19
+!i10b 1
+!s100 l2SW^YnDTlIV4K1dTcf2H1
+I9:Z>U==6RQ=SI:@j]`84K2
+R1
+R2
+w1556303683
+8/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/memStateMachine_Set.v
+F/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/memStateMachine_Set.v
+R12
+R3
+r1
+!s85 0
+31
+R21
+!s107 /afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/memStateMachine_Set.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/memStateMachine_Set.v|
+!i113 1
+R4
+R5
+nmem@state@machine_@set
+vmemv
+R19
+!i10b 1
+!s100 3[EnIlTZ0leYAFCEgjo?f1
+I2j8Pz;GUO0U17AMNOD2Ui2
+R1
+R2
+R8
+8/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/memv.v
+F/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/memv.v
+L0 6
+R3
+r1
+!s85 0
+31
+R21
+!s107 /afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/memv.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/memv.v|
+!i113 1
+R4
+R5
+vmux2_1_16b
+R19
+!i10b 1
+!s100 K2oeGoKTEROkebIj_N4hz1
+IlfE:9]^4f=bbol3dIVeT[2
+R1
+R2
+R8
+8/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/mux2_1_16b.v
+F/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/mux2_1_16b.v
+L0 8
+R3
+r1
+!s85 0
+31
+R21
+!s107 /afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/mux2_1_16b.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/mux2_1_16b.v|
+!i113 1
+R4
+R5
+vmux4_1
+Z22 !s110 1556503620
+!i10b 1
+!s100 TAQn@=XbGMcD4BSz9KakZ2
+I=dzF@cFJH9iigS;K7]QB32
+R1
+R2
+R6
+8/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/mux4_1.v
+F/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/mux4_1.v
+L0 7
+R3
+r1
+!s85 0
+31
+Z23 !s108 1556503620.000000
+!s107 /afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/mux4_1.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/mux4_1.v|
+!i113 1
+R4
+R5
+vnand2
+R22
+!i10b 1
+!s100 Q>o694DW2Ab[kzXTIDbc<3
+I;h4bY<DPMCmAdI>Wg<<iS0
+R1
+R2
+R6
+8/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/nand2.v
+F/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/nand2.v
+L0 7
+R3
+r1
+!s85 0
+31
+R23
+!s107 /afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/nand2.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/nand2.v|
+!i113 1
+R4
+R5
+vproc
+R22
+!i10b 1
+!s100 SR2BZN>=V2@nK8GMe4K]U2
+IJk4>mGzhn`[?UghFLmE]i3
+R1
+R2
+w1556503508
+8/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/proc.v
+F/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/proc.v
+L0 4
+R3
+r1
+!s85 0
+31
+R23
+!s107 /afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/proc.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/proc.v|
+!i113 1
+R4
+R5
+vproc_hier
+R22
+!i10b 1
+!s100 fCQ@9<WUiG_i1e@liDFCK3
+I4nXMEWLEkRomFzgZSQbhI1
+R1
+R2
+R6
+8/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/proc_hier.v
+F/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/proc_hier.v
+L0 6
+R3
+r1
+!s85 0
+31
+R23
+!s107 /afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/proc_hier.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/proc_hier.v|
+!i113 1
+R4
+R5
+vproc_hier_bench
+R22
+!i10b 1
+!s100 TSAm8H3HYHQIk<deL@Ze20
+IKQR?j8AH<0i<6Fci?0a@G2
+R1
+R2
+R6
+8/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/proc_hier_bench.v
+F/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/proc_hier_bench.v
+L0 4
+R3
+r1
+!s85 0
+31
+R23
+!s107 /afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/proc_hier_bench.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/proc_hier_bench.v|
+!i113 1
+R4
+R5
+vproc_hier_pbench
+Z24 !s110 1556503621
+!i10b 1
+!s100 :HS5@N`D;=]a>lS]ESWnT2
+Icm5mFSn^N4W;T>AiNOJ5A1
+R1
+R2
+w1556404804
+8/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/proc_hier_pbench.v
+F/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/proc_hier_pbench.v
+L0 4
+R3
+r1
+!s85 0
+31
+R23
+!s107 /afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/proc_hier_pbench.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/proc_hier_pbench.v|
+!i113 1
+R4
+R5
+vrca_16b
+R24
+!i10b 1
+!s100 `o?lo9SZfbo<dLA[b0aWK0
+Ii6aMLCHUh?Li7]W`<k8Y>1
+R1
+R2
+R6
+8/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/rca_16b.v
+F/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/rca_16b.v
+L0 7
+R3
+r1
+!s85 0
+31
+Z25 !s108 1556503621.000000
+!s107 /afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/rca_16b.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/rca_16b.v|
+!i113 1
+R4
+R5
+vrca_4b
+R24
+!i10b 1
+!s100 V`^0U>L6=L`CD[0oDX[KC3
+IX8OTbc]jPCB=l]Lh4`9P62
+R1
+R2
+R6
+8/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/rca_4b.v
+F/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/rca_4b.v
+L0 7
+R3
+r1
+!s85 0
+31
+R25
+!s107 /afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/rca_4b.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/rca_4b.v|
+!i113 1
+R4
+R5
+vregister
+R24
+!i10b 1
+!s100 ?P0eEgmblkQaWNj>lzhcU3
+I=D2mnZ>YMQ?0@c@1mjSEK3
+R1
+R2
+w1556214614
+8/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/register.v
+F/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/register.v
+L0 2
+R3
+r1
+!s85 0
+31
+R25
+!s107 /afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/register.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/register.v|
+!i113 1
+R4
+R5
+vregister2b
+R24
+!i10b 1
+!s100 f^7ai7f^`CG0QTFO625k83
+IKFG@jYHkH[R2=GWO0G`i43
+R1
+R2
+w1556214622
+8/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/register2b.v
+F/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/register2b.v
+L0 2
+R3
+r1
+!s85 0
+31
+R25
+!s107 /afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/register2b.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/register2b.v|
+!i113 1
+R4
+R5
+vregister3b
+R24
+!i10b 1
+!s100 h5BENn]Y7R76jzZL>Z2`J3
+ICX@b3JhZAH[3U7MVVLVga0
+R1
+R2
+w1556214832
+8/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/register4b.v
+F/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/register4b.v
+L0 2
+R3
+r1
+!s85 0
+31
+R25
+!s107 /afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/register4b.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/register4b.v|
+!i113 1
+R4
+R5
+vrf
+Z26 !s110 1556503622
+!i10b 1
+!s100 TeX`mkoHl5XA[2j:Q55HX1
+ILgQf8;h7dV<VQoNE71iHk1
+R1
+R2
+w1556126781
+8/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/rf.v
+F/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/rf.v
+R12
+R3
+r1
+!s85 0
+31
+Z27 !s108 1556503622.000000
+!s107 /afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/rf.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/rf.v|
+!i113 1
+R4
+R5
+vrf_hier
+R26
+!i10b 1
+!s100 z0?Zm?Wc::nnfSoWQkY:E2
+I30i5kUD^CV2PK@dKVDz=92
+R1
+R2
+w1556127074
+8/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/rf_hier.v
+F/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/rf_hier.v
+R12
+R3
+r1
+!s85 0
+31
+R27
+!s107 /afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/rf_hier.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/rf_hier.v|
+!i113 1
+R4
+R5
+vrotateLeft
+R26
+!i10b 1
+!s100 ZbmoncQ?@HbQW`QBj?T1_2
+I5E?=Eh5C>;Pf::C`5TfSn3
+R1
+R2
+R6
+8/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/rotateLeft.v
+F/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/rotateLeft.v
+L0 1
+R3
+r1
+!s85 0
+31
+R27
+!s107 /afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/rotateLeft.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/rotateLeft.v|
+!i113 1
+R4
+R5
+nrotate@left
+vrotateRight
+R26
+!i10b 1
+!s100 DdKLB3YK3PY`;Y?b]Q3BL1
+I7dZj1==9V5I=VMbEz33DR2
+R1
+R2
+R6
+8/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/rotateRight.v
+F/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/rotateRight.v
+L0 2
+R3
+r1
+!s85 0
+31
+R27
+!s107 /afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/rotateRight.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/rotateRight.v|
+!i113 1
+R4
+R5
+nrotate@right
+vshiftLeft
+R26
+!i10b 1
+!s100 `0Kzz[PhCF:<o;IK_3o;i2
+I^<iLIk17XFOQfTaDZQTOB2
+R1
+R2
+R6
+8/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/shiftLeft.v
+F/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/shiftLeft.v
+L0 1
+R3
+r1
+!s85 0
+31
+R27
+!s107 /afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/shiftLeft.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/shiftLeft.v|
+!i113 1
+R4
+R5
+nshift@left
+vshiftRightA
+R26
+!i10b 1
+!s100 kYXQ<lJT@6lnWHjna1E_k3
+I]GEdRb=<JQUFT5cjLCN^P1
+R1
+R2
+R6
+8/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/shiftRightA.v
+F/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/shiftRightA.v
+L0 2
+R3
+r1
+!s85 0
+31
+R27
+!s107 /afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/shiftRightA.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/shiftRightA.v|
+!i113 1
+R4
+R5
+nshift@right@a
+vshiftRightL
+Z28 !s110 1556503623
+!i10b 1
+!s100 Zoi0<jeTkT8C7NdiZ9C>Y2
+IZ`g27i__9<hT0]R`0W1771
+R1
+R2
+R6
+8/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/shiftRightL.v
+F/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/shiftRightL.v
+L0 2
+R3
+r1
+!s85 0
+31
+Z29 !s108 1556503623.000000
+!s107 /afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/shiftRightL.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/shiftRightL.v|
+!i113 1
+R4
+R5
+nshift@right@l
+vstallmem
+R28
+!i10b 1
+!s100 Xb3Eei49>I`Xo_M[cFM`73
+IEi]Dzd>5F?9?3c0jocQ5h2
+R1
+R2
+R20
+8/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/stallmem.v
+F/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/stallmem.v
+L0 45
+R3
+r1
+!s85 0
+31
+R29
+!s107 /afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/stallmem.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/stallmem.v|
+!i113 1
+R4
+R5
+vwaySelect
+R28
+!i10b 1
+!s100 OF1TcU^e9?RUH5FlmaD:J3
+IKSF^28QL^Tbd0]YXDOY9D3
+R1
+R2
+R8
+8/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/waySelect.v
+F/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/waySelect.v
+R9
+R3
+r1
+!s85 0
+31
+R29
+!s107 /afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/waySelect.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/waySelect.v|
+!i113 1
+R4
+R5
+nway@select
+vxor2
+R28
+!i10b 1
+!s100 hi9UOjFnSE]?OOLLFnCZ`0
+IHCf<^46z0K2Yo3>@b@IWR1
+R1
+R2
+R6
+8/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/xor2.v
+F/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/xor2.v
+L0 7
+R3
+r1
+!s85 0
+31
+R29
+!s107 /afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/xor2.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/xor2.v|
+!i113 1
+R4
+R5
+vxor3
+!s110 1556503624
+!i10b 1
+!s100 ^O9JJnzQB<?D0=N8Tn^?M2
+IIhBI^YjIZN1l[c?DZZ7MO0
+R1
+R2
+R6
+8/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/xor3.v
+F/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/xor3.v
+L0 7
+R3
+r1
+!s85 0
+31
+R29
+!s107 /afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/xor3.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/xor3.v|
+!i113 1
+R4
+R5

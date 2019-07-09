@@ -1,0 +1,12 @@
+lbi r7, 05 // 0
+lbi r2, 10 // 2
+lbi r2, 40 // 4
+j 2 // 6
+nop // 8 
+bnez r7, 6 // icount 63 // a
+addi r3, r1, 7 // icount 64 // c
+ror r5, r6, r3 // icount 65 // e
+sll r5, r3, r2 // icount 66 // 10 
+seq r0, r4, r2 // icount 67 // 12
+
+halt

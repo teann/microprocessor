@@ -1,0 +1,20 @@
+Line 36: Bad keyword integer
+Line 37: Bad keyword integer
+Line 38: Bad keyword integer
+Line 44: Bad keyword initial
+Line 45: begin without always/case
+Line 53: Bad keyword posedge
+Line 54: Bad keyword if
+Line 55: Bad keyword if
+Line 69: Bad keyword if
+Line 70: Bad keyword if
+Line 79: Bad keyword else
+Line 79: Bad keyword if
+Line 87: Bad keyword else
+Line 94: Bad keyword else
+Line 94: Bad keyword if
+Line 106: Bad keyword else
+Line 107: Bad keyword if
+Line 114: Bad keyword else
+Line 53: Always without case(x)
+End of file /u/t/i/tianen/public/ECE552/assigns-teann/project/demo3/verilog/proc_hier_bench.v. Hash = 1163463046

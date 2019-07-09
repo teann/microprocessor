@@ -1,0 +1,14 @@
+0000 c50a  lbi r5, 10
+0002 0800  nop
+0004 0800  nop
+0006 0800  nop
+0008 2000  j .return_from_prime
+           
+000a       .return_from_prime:
+000a 6d04  beqz r5 .try_next_number
+000c 4ea0  addi r5 r6 0	// when halts, should have next prime number value 12373 0x3055
+000e 0000  halt
+           
+0010       .try_next_number:
+0010 4e02  addi r0 r6 2
+0012 0000  halt

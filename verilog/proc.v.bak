@@ -1,0 +1,335 @@
+/* $Author: karu $ */
+/* $LastChangedDate: 2009-03-04 23:09:45 -0600 (Wed, 04 Mar 2009) $ */
+/* $Rev: 45 $ */
+module proc (/*AUTOARG*/
+   // Outputs
+   err, 
+   // Inputs
+   clk, rst
+   );
+
+   input clk;
+   input rst;
+
+   output err;
+
+   // None of the above lines can be modified
+
+   // OR all the err ouputs for every sub-module and assign it as this
+   // err output
+   
+   // As desribed in the homeworks, use the err signal to trap corner
+   // cases that you think are illegal in your statemachines
+   wire [15:0] instr, readData, read, PC, PCBeforeHalt, ImmSExt5b, ImmSExt8b, ImmZExt5b, ImmSExt11b, ImmZExt8b, PCplus2, src2, aluout, immediate, ALUorMEMdata, jumpALUA;
+   wire [15:0] jumpALUout, jumpALUmuxOut, branchOrNo, writeRegData, PCOut;
+   wire [2:0] SESel;
+   wire [1:0] RegDst;
+   wire memwr, instrDump, memDump, cherr, memEnable, ALUSrc2, PCSrc, PCImm, MemToReg, MemDump, Jump, lt, gt, equalto, muxsel;
+   wire dummyCout1, dummyCout2, writeEn, halt;  
+   wire [15:0] readData1, readData2;
+   wire [2:0]  writeRegSel;
+   wire idexRegWrite, idexMemwr, idexMemEnable, idexALUSrc2, idexPCImm, idexMemToReg, idexJump, idexPCSrc;
+   wire [15:0] idexPCPlus2, idexInstr, idexReadData1, idexReadData2;
+   wire [2:0] idexSESel;
+   wire [1:0] idexRegDst;
+   wire [15:0] idexImmSExt5b, idexImmZExt5b, idexImmSExt8b, idexImmZExt8b, idexImmSExt11b;
+   wire hazard_or_no1, hazard_or_no2, hazard_or_no3;
+   wire [15:0] ifidInstr, ifidPCplus2, PCpostMux1, PCpostMux2, PCpostMux2Layer;
+   wire [15:0] layer1, layer2, layer3;
+   wire exmemRegWrite, exmemMemToReg, exmemPCSrc;
+   wire [1:0] exmemRegDst;
+   wire [15:0] exmemReadData2, exmemAluout, exmemPCPlus2, exmemInstr;
+   wire exmemMemwr, exmemMemEnable;
+   wire memwbRegWrite, memwbMemToReg, memwbPCSrc, hazard_flag1, hazard_flag2, hazard_or_no2_input, ifidInstMemStall;
+   wire [1:0] memwbRegDst;
+   wire [15:0] memwbInstr, memwbPCPlus2, memwbReadData, memwbAluout;
+   wire [15:0] idexInstrInput, ifidInstrInput, ifidPCPlus2Input;
+   wire exmemALUSrc2, exmemPCImm, exmemJump;
+   wire [2:0] exmemSESel, memwbSESel;
+   wire memwbMemwr, memwbMemEnable, memwbALUSrc2, memwbPCImm, memwbJump, feauxhalt, ifidFeauxhalt, idexFeauxhalt, exmemFeauxhalt, memwbFeauxhalt, finalFeauxhalt;
+   wire [15:0] memwbReadData2;
+   wire idexFeauxhaltOutput, ifidFeauxhaltInput, isHazard, PCImmFlushStall, JumpFlushStall;
+   wire [15:0] feauxhaltLayer1, feauxhaltLayer2;
+   wire [15:0] ifidInstrInputFlush, idexInstrInputFlush, ifidInstrLayer1;
+   
+   wire ifidFeauxhaltInputFlush, idexFeauxhaltInputFlush, exmemMuxsel, memwbMuxsel, dataMemErr, instMemErr, instMemCacheHit, instMemRd, instMemWrite, instMemStall, instMemDone, PCSrcFlushStall;
+   wire [15:0] PCPlusImmOut, ifidPCPlus2InputFlushBeforeStall, jumpALUoutStall, PCBeforeHaltRegOut;
+
+      //
+   // IF/ID
+   // 
+   wire [15:0] ifidPCPlus2InputFlush, PCBeforeStall; 
+
+
+   assign err = instMemErr | dataMemErr;
+
+
+   rca_16b jumpAdder(.A(jumpALUA), .B(idexPCPlus2), .C_in(1'b0), .S(PCPlusImmOut), .C_out(dummyCout2));
+
+ 
+   register ifidInstrR(.q(ifidInstr), .d(ifidInstrInputFlush), .clk(clk), .rst(rst)); 
+   register ifidPCR(.q(ifidPCplus2), .d(ifidPCPlus2InputFlush), .clk(clk), .rst(rst));
+   register pcdff(.q(PCOutDff), .d(PCpostMux2), .clk(clk), .rst(rst));
+   register jumpALUoutStallR(.q(jumpALUoutStall), .d(jumpALUout), .clk(clk), .rst(rst));
+   register PCBeforeHaltRegOutR(.q(PCBeforeHaltRegOut), .d(PCBeforeHalt), .clk(clk), .rst(rst));
+   dff ifidInstMemStallR(.q(ifidInstMemStall), .d(instMemStall), .clk(clk), .rst(rst));
+   assign PCOut = muxsel & instMemStall ? PCBeforeStall : PCOutDff;
+   assign ifidFeauxhaltInput = isHazard ? 1'b0 : finalFeauxhalt;
+
+   dff ifidFeauxhaltR(.q(ifidFeauxhalt), .d(ifidFeauxhaltInputFlush), .clk(clk), .rst(rst)); 
+   
+   assign ifidPCPlus2InputFlush = (instMemStall & ~muxsel) ? PCOut : ifidPCPlus2InputFlushBeforeStall;
+   assign ifidPCPlus2InputFlushBeforeStall = ((idexInstr[15:11] == 5'b00111 /*jalr*/) | (idexInstr[15:11] == 5'b00101)  /*jr*/) ? PCOut : ifidPCPlus2Input; //jr and jalr checks
+   assign ifidPCPlus2Input = (Jump | PCImm) ? ifidPCplus2 : ((isHazard) ? ifidPCplus2: PCplus2);
+   rca_16b PCplus2adder(.A(PCOut), .B(16'h2), .C_in(1'b0), .S(PCplus2), .C_out(dummyCout1));  //increment PC
+//J/JR AND JAL/JALR FLUSHES //added exmemjump // deleted i
+  wire [15:0] ifidInstrInputFlushLayer, ifidInstrInputBranchFlush, ifidInstrInputFlushBeforeStall;
+
+   assign ifidInstrInputFlush = (instMemStall & ~muxsel) ? ifidInstr : ifidInstrInputFlushBeforeStall;
+   assign ifidInstrInputFlushBeforeStall = ((idexPCImm == PCImm)) ? ifidInstrInputFlushLayer : 16'h0800;
+   assign ifidInstrInputFlushLayer = ((idexPCImm | idexJump)) ? 16'h0800 : ((PCImm | Jump) & (ImmSExt11b != 16'b0)) ? 16'h0800 : ifidInstrInputBranchFlush; 
+   assign ifidInstrInputBranchFlush = muxsel ? 16'h0800 : ifidInstrInput; 
+
+   assign ifidFeauxhaltInputFlush = ((PCImm | Jump)) ? 1'b0 : ifidFeauxhaltInput;
+
+  
+   assign ifidInstrInput = (finalFeauxhalt & ~isHazard) ? 16'h0800 : feauxhaltLayer1;
+   assign feauxhaltLayer1 = (finalFeauxhalt & isHazard) ? ifidInstr : feauxhaltLayer2;
+   assign feauxhaltLayer2 = (~finalFeauxhalt & isHazard) ? ifidInstr : instr;
+
+
+ //  memory2c_align instructMem(.data_out(instr), .data_in(read), .addr(PCOut), .enable(1'b1), .wr(1'b0), .createdump(instrDump), .clk(clk), .rst(rst), .err(instMemErr));
+   stallmem instructMemStall(.DataOut(instr), .Done(instMemDone), .Stall(instMemStall), .CacheHit(instMemCacheHit), .err(instMemErr), .Addr(PCOut), .DataIn(read), .Rd(1'b1), .Wr(1'b0), .createdump(instrDump), .clk(clk), .rst(rst));
+   
+  //added exmem and memwb control signal checks
+   
+
+   assign PCBeforeHalt = ifidInstMemStall ? PCBeforeHaltRegOut : ((idexJump | idexPCImm | muxsel) ? (ifidInstMemStall ? jumpALUoutStall : jumpALUout) : ifidPCPlus2Input); // Only considers j and jal instructions, not jalr and jr //CHANGED IT TO PCIMM ON A WHIM
+   assign finalFeauxhalt = instMemStall | idexPCSrc | ((PCImm | Jump) | (idexPCImm | idexJump) | (muxsel) | (instr[15:11] != 5'b0)) ? 1'b0 : ((instr[15:11] == 5'b0 & ~rst)  ? 1'b1 : 1'b0); 
+   assign halt = (memwbFeauxhalt | err) ? 1'b1 : 1'b0;
+   assign PCpostMux1 = idexPCSrc ? PC : PCplus2; 
+   assign PCpostMux2 = instMemStall ?  PCOut : (isHazard & ~(idexJump | idexPCImm)) ? ifidPCplus2 : PCpostMux1;
+
+   assign PCBeforeStall = (finalFeauxhalt) | (ifidInstr[15:11] == 5'b00110 & memwbInstr[15:11] == 5'b00001) ? PCOut : PCBeforeHalt; //changed pc to pcou 
+   assign PC = instMemStall ? ifidPCplus2 : PCBeforeStall;
+    //
+   // ID/EX 
+   //
+
+  wire [1:0] RegDstStall;
+  control_hier control(/*AUTOARG*/
+                     // Outputs
+                     .err(cherr), //NOT IMPLEMENTED YET
+                     .RegDst(RegDst),
+                     .SESel(SESel),
+                     .RegWrite(writeEn),
+                     .DMemWrite(memwr),
+                     .DMemEn(memEnable),
+                     .ALUSrc2(ALUSrc2),
+                     .PCSrc(PCSrc),
+                     .PCImm(PCImm),
+                     .MemToReg(MemToReg),
+                     .DMemDump(memDump),
+                     .Jump(Jump),
+                     // Inputs
+                     .OpCode(idexInstrInput[15:11]),
+                     .Funct(idexInstrInput[1:0])
+                     );
+//FLUSH ALL CONTROL SIGNALS IN DECODE STAGE
+   wire writeEnFlush, MemToRegFlush, PCSrcFlush, memwrFlush, memEnableFlush, ALUSrc2Flush, PCImmFlush, JumpFlush;
+   assign writeEnFlush = (muxsel | instMemStall) ? 1'b0 : writeEn;
+   assign MemToRegFlush = (muxsel) ? 1'b0 : MemToReg;
+   assign PCSrcFlush = (muxsel) ? 1'b0 : PCSrc;
+   assign memwrFlush = (muxsel) ? 1'b0 : memwr;
+   assign memEnableFlush = (muxsel) ? 1'b0 : memEnable;
+   assign ALUSrc2Flush = (muxsel) ? 1'b0 : ALUSrc2; 
+   assign PCImmFlush = (muxsel) ? 1'b0 : PCImm;
+   assign JumpFlush = (muxsel | instMemStall) ? 1'b0 : Jump;
+
+   assign PCSrcFlushStall = (instMemStall) ? idexPCSrc : PCSrcFlush;
+   assign PCImmFlushStall = (instMemStall) ? idexPCImm : PCImmFlush;
+   assign JumpFlushStall = (instMemStall) ? idexJump : JumpFlush;
+  // assign RegDstStall = (instMemStall) ? idexRegDst : RegDst;
+
+
+   dff idexRegWriteR(.q(idexRegWrite), .d(writeEnFlush), .clk(clk), .rst(rst)); 
+   register2b idexRegDstR(.q(idexRegDst), .d(RegDst), .clk(clk), .rst(rst)); //ISSUE, THIS NEEDS TO BE A 2 BIT REGISTER
+   dff idexMemToRegR(.q(idexMemToReg), .d(MemToRegFlush), .clk(clk), .rst(rst)); 
+   dff idexPCSrcR(.q(idexPCSrc), .d(PCSrcFlushStall), .clk(clk), .rst(rst)); 
+
+   //MEM SIGNALS
+   dff idexMemwrR(.q(idexMemwr), .d(memwrFlush), .clk(clk), .rst(rst)); 
+   dff idexMemEnableR(.q(idexMemEnable), .d(memEnableFlush), .clk(clk), .rst(rst)); 
+
+
+   //EX SIGNALS
+   dff idexALUSrc2R(.q(idexALUSrc2), .d(ALUSrc2Flush), .clk(clk), .rst(rst)); 
+   register3b idexSESelR(.q(idexSESel), .d(SESel), .clk(clk), .rst(rst)); //ISSUE, THIS NEEDS TO BE A 3 BIT REGISTER
+   dff idexPCImmR(.q(idexPCImm), .d(PCImmFlushStall), .clk(clk), .rst(rst)); 
+   dff idexJumpR(.q(idexJump), .d(JumpFlushStall), .clk(clk), .rst(rst));
+
+   assign idexInstrInput = isHazard | instMemStall ? 16'h0800 : ifidInstr;
+
+   assign idexInstrInputFlush = (muxsel) ? 16'h0800 : idexInstrInput; //idexImmSExt11b = 16'b0
+   
+   assign idexFeauxhaltInputFlush = ((idexJump | idexPCImm) | muxsel) ? 1'b0 : ifidFeauxhalt;
+   //sign extensions  
+   //check if we are loading a bgez instruction
+   assign ImmSExt5b = ifidInstr[4] ? {{11{1'b1}},ifidInstr[4:0]} : {{11{1'b0}},ifidInstr[4:0]};
+   assign ImmZExt5b = {{11{1'b0}},ifidInstr[4:0]};
+   assign ImmSExt8b = ifidInstr[7] ? {{8{1'b1}},ifidInstr[7:0]} : {{8{1'b0}},ifidInstr[7:0]};
+   assign ImmZExt8b = {{8{1'b0}},ifidInstr[7:0]};
+   assign ImmSExt11b = ifidInstr[10] ? {{5{1'b1}},ifidInstr[10:0]} : {{5{1'b0}},ifidInstr[10:0]};
+
+
+//FEAUXHALT
+
+   dff idexFeauxhaltR(.q(idexFeauxhalt), .d(idexFeauxhaltInputFlush), .clk(clk), .rst(rst));
+ 
+   //PCPLUS2 and the INSTRUCTION
+   register idexPCPlus2R(.q(idexPCPlus2), .d(ifidPCplus2), .clk(clk), .rst(rst));
+   register idexInstrR(.q(idexInstr), .d(idexInstrInputFlush), .clk(clk), .rst(rst));
+   //5 DIFFERENT SIGN EXTENSIONS   
+   register idexImmSExt5bR(.q(idexImmSExt5b), .d(ImmSExt5b), .clk(clk), .rst(rst));
+   register idexImmZExt5bR(.q(idexImmZExt5b), .d(ImmZExt5b), .clk(clk), .rst(rst));
+   register idexImmSExt8bR(.q(idexImmSExt8b), .d(ImmSExt8b), .clk(clk), .rst(rst));
+   register idexImmZExt8bR(.q(idexImmZExt8b), .d(ImmZExt8b), .clk(clk), .rst(rst));
+   register idexImmSExt11bR(.q(idexImmSExt11b), .d(ImmSExt11b), .clk(clk), .rst(rst));
+ 
+  
+   assign src2 = idexALUSrc2 ? idexReadData2 : immediate; 
+ 
+   // CONTROL
+   wire readAndWrite;
+   wire [15:0] readData1Input;
+
+   rf_hier regFile(
+                // Outputs
+                .readData1(readData1Input), .readData2(readData2), 
+                // Inputs
+                .readReg1Sel( idexInstrInput[10:8]), .readReg2Sel(idexInstrInput[7:5]),.writeRegSel(writeRegSel), .writeData(writeRegData), .writeEn(memwbRegWrite)
+                ); 
+   
+   
+   
+   register idexReadData1R(.q(idexReadData1), .d(readData1), .clk(clk), .rst(rst));
+   register idexReadData2R(.q(idexReadData2), .d(readData2), .clk(clk), .rst(rst));
+
+   assign readAndWrite = ((idexInstrInput[10:8] == writeRegSel) & ~(idexInstrInput[10:8] == 3'b0) & (memwbInstr[15:13] != 3'b011) & (memwbInstr[15:11] != 5'b10000) & (memwbInstr[15:11] != 5'b00101) & (memwbInstr[15:11] != 5'b00100)) ? 1'b1: 1'b0;
+   assign readData1 = readAndWrite ? memwbPCPlus2 : readData1Input;
+ 
+   
+
+   // SESel LOGIC
+
+   assign immediate = (idexSESel == 3'b000) ? idexImmZExt5b : layer1;
+   assign layer1 = (idexSESel == 3'b001) ? idexImmZExt8b : layer2;
+   assign layer2 = (idexSESel == 3'b010) ? idexImmSExt5b : layer3;
+   assign layer3 = (idexSESel == 3'b100) ? idexImmSExt8b : idexImmSExt11b;	
+   alu alu(.opcode(idexInstr[15:11]), .funct(idexInstr[1:0]), .src1(idexReadData1), .src2(src2), .lt(lt), .gt(gt), .equalto(equalto), .aluout(aluout));
+   branchLogic bL(.equalto(equalto), .lt(lt), .gt(gt), .opcode(idexInstr[15:11]), .muxsel(muxsel));
+   assign jumpALUA = idexPCImm ? idexImmSExt11b : branchOrNo;
+   assign jumpALUout = (idexJump) ? aluout : PCPlusImmOut;
+   assign branchOrNo = muxsel ? idexImmSExt8b : 16'b0;
+
+   
+   // EX/MEM
+   //
+   
+
+
+   // WB SIGNALS
+
+   
+   dff exmemRegWriteR(.q(exmemRegWrite), .d(idexRegWrite), .clk(clk), .rst(rst)); 
+   register2b exmemRegDstR(.q(exmemRegDst), .d(idexRegDst), .clk(clk), .rst(rst)); //ISSUE, THIS NEEDS TO BE A 2 BIT REGISTER
+   dff exmemMemToRegR(.q(exmemMemToReg), .d(idexMemToReg), .clk(clk), .rst(rst)); 
+   dff exmemPCSrcR(.q(exmemPCSrc), .d(idexPCSrc), .clk(clk), .rst(rst)); 
+
+   // MEM SIGNALS
+
+   dff exmemMemwrR(.q(exmemMemwr), .d(idexMemwr), .clk(clk), .rst(rst)); 
+   dff exmemMemEnableR(.q(exmemMemEnable), .d(idexMemEnable), .clk(clk), .rst(rst)); 
+
+   //EX SIGNALS
+   dff exmemALUSrc2R(.q(exmemALUSrc2), .d(idexALUSrc2), .clk(clk), .rst(rst)); 
+   register3b exmemSESelR(.q(exmemSESel), .d(idexSESel), .clk(clk), .rst(rst)); //ISSUE, THIS NEEDS TO BE A 3 BIT REGISTER
+   dff exmemPCImmR(.q(exmemPCImm), .d(idexPCImm), .clk(clk), .rst(rst)); 
+   dff exmemJumpR(.q(exmemJump), .d(idexJump), .clk(clk), .rst(rst));
+
+
+   register exmemReadData2R(.q(exmemReadData2), .d(idexReadData2), .clk(clk), .rst(rst));
+   register exmemAluoutR(.q(exmemAluout), .d(aluout), .clk(clk), .rst(rst));
+   register exmemInstrR(.q(exmemInstr), .d(idexInstr), .clk(clk), .rst(rst));
+   register exmemPCPlus2R(.q(exmemPCPlus2), .d(idexPCPlus2), .clk(clk), .rst(rst));
+
+//FEAUXHALT
+   
+   dff exmemFeauxhaltR(.q(exmemFeauxhalt), .d(idexFeauxhalt), .clk(clk), .rst(rst));
+
+
+
+
+   memory2c_align dataMem(.data_out(readData), .data_in(exmemReadData2), .addr(exmemAluout), .enable(exmemMemEnable), .wr(exmemMemwr), .createdump(memDump), .clk(clk), .rst(rst), .err(dataMemErr));
+   
+   
+  
+   
+   
+//hazard detectors
+
+   hazard hazard_exmem(.muxselA(1'b0), .muxselB(muxsel), .regWriteEn(exmemRegWrite), .regdst_dec(RegDst), .regdst_hazard(exmemRegDst), .instr_hazard(exmemInstr), .instr_dec(ifidInstr), .checkInstr(idexInstrInputFlush), .checkInstr1(ifidInstrInputFlush), .hazard_or_no(hazard_or_no2), .rst(rst), .clk(clk));
+   hazard hazard_idex(.muxselA(1'b0), .muxselB(exmemMuxsel), .regWriteEn(idexRegWrite), .regdst_dec(RegDst),  .regdst_hazard(idexRegDst), .instr_hazard(idexInstr), .instr_dec(ifidInstr), .checkInstr(idexInstrInputFlush), .checkInstr1(ifidInstrInputFlush), .hazard_or_no(hazard_or_no3), .rst(rst), .clk(clk)); 
+   hazard hazard_memwb(.muxselA(muxsel), .muxselB(memwbMuxsel), .regWriteEn(memwbRegWrite), .regdst_dec(RegDst),  .regdst_hazard(memwbRegDst), .instr_hazard(memwbInstr), .instr_dec(ifidInstr), .checkInstr(idexInstrInputFlush), .checkInstr1(ifidInstrInputFlush), .hazard_or_no(hazard_or_no1), .rst(rst), .clk(clk));
+
+   assign isHazard = (hazard_or_no1 | hazard_or_no2 | hazard_or_no3 | hazard_flag1) ? 1'b1 : 1'b0;
+   
+   assign hazard_or_no2_input = hazard_or_no2 ? 1'b1 : (hazard_flag2 ? 1'b1: 1'b0);
+   
+   dff hazardflop1(.q(hazard_flag1), .d(hazard_or_no2_input), .clk(clk), .rst(rst));
+   dff hazardflop2(.q(hazard_flag2), .d(hazard_or_no3), .clk(clk), .rst(rst));
+   //MEM/WB
+   //WB SIGNALS
+   
+   dff memwbRegWriteR(.q(memwbRegWrite), .d(exmemRegWrite), .clk(clk), .rst(rst)); 
+   register2b memwbRegDstR(.q(memwbRegDst), .d(exmemRegDst), .clk(clk), .rst(rst)); //ISSUE, THIS NEEDS TO BE A 2 BIT REGISTER
+   dff memwbMemToRegR(.q(memwbMemToReg), .d(exmemMemToReg), .clk(clk), .rst(rst)); 
+   dff memwbPCSrcR(.q(memwbPCSrc), .d(exmemPCSrc), .clk(clk), .rst(rst)); 
+   register memwbReadDataR(.q(memwbReadData), .d(readData), .clk(clk), .rst(rst));
+   register memwbAluoutR(.q(memwbAluout), .d(exmemAluout), .clk(clk), .rst(rst));
+   register memwbInstrR(.q(memwbInstr), .d(exmemInstr), .clk(clk), .rst(rst));
+   register memwbPCPlus2R(.q(memwbPCPlus2), .d(exmemPCPlus2), .clk(clk), .rst(rst));
+   register memwbReadData2R(.q(memwbReadData2), .d(exmemReadData2), .clk(clk), .rst(rst));
+
+ // MEM SIGNALS
+
+   dff memwbMemwrR(.q(memwbMemwr), .d(exmemMemwr), .clk(clk), .rst(rst)); 
+   dff memwbMemEnableR(.q(memwbMemEnable), .d(exmemMemEnable), .clk(clk), .rst(rst)); 
+
+   //EX SIGNAL
+   dff memwbALUSrc2R(.q(memwbALUSrc2), .d(exmemALUSrc2), .clk(clk), .rst(rst)); 
+   register3b memwbSESelR(.q(memwbSESel), .d(exmemSESel), .clk(clk), .rst(rst)); //ISSUE, THIS NEEDS TO BE A 3 BIT REGISTER
+   dff memwbPCImmR(.q(memwbPCImm), .d(exmemPCImm), .clk(clk), .rst(rst)); 
+   dff memwbJumpR(.q(memwbJump), .d(exmemJump), .clk(clk), .rst(rst));
+
+
+
+   dff exmemMuxselR(.q(exmemMuxsel), .d(muxsel), .clk(clk), .rst(rst)); 
+   dff memwbMuxselR(.q(memwbMuxsel), .d(exmemMuxsel), .clk(clk), .rst(rst));
+//FEAUXHALT
+  
+   dff memwbFeauxhaltR(.q(memwbFeauxhalt), .d(exmemFeauxhalt), .clk(clk), .rst(rst));
+//FEAUXHALT
+   dff finalFeauxhaltR(.q(feauxhalt), .d(finalFeauxhalt), .clk(clk), .rst(rst));
+ 
+   assign ALUorMEMdata = memwbMemToReg ? memwbReadData : memwbAluout;
+   assign writeRegData = (memwbRegDst == 2'b11) ? memwbPCPlus2 : ALUorMEMdata;
+   assign writeRegSel = (memwbRegDst == 2'b00) ? memwbInstr[4:2] :
+			((memwbRegDst == 2'b01) ? memwbInstr[7:5] :
+		        ((memwbRegDst == 2'b10) ? memwbInstr[10:8] :
+			  3'b111));
+
+
+
+endmodule // proc
+// DUMMY LINE FOR REV CONTROL :0:
